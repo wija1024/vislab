@@ -2,7 +2,7 @@
 
 Collection of exercise examples and base projects
 
-* E1: Code Web Service Clients and Servers
-* E2: Code RESTful Services
-* E3: Code a BPEL Process
-* E4: Code RESTful Transactions
+* lab1: Code Web Service Clients and Servers
+* lab2: Code RESTful Services
+* lab3: Code a BPEL Process
+* lab4: Code RESTful Transactions
