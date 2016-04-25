@@ -44,7 +44,7 @@ public class HelloWorldTest {
 	 * Test to see that the message "Got it!" is sent in the response.
 	 */
 	@Test
-	public void testGetIt() {
+	public void testSayHello() {
 		String responseMsg = target.path("helloworld").request().accept(MediaType.TEXT_PLAIN).get(String.class);
 		assertEquals("Hallo Welt!", responseMsg);
 	}
