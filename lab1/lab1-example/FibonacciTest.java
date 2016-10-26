@@ -50,14 +50,14 @@ public class FibonacciTest {
 
 		// call the service 25 times
 		int max = 25;
-		int result = 0;
-		for (int i = 1; i < max; i++) {
+		int result = 1;
+		for (int i = 1; i <= max; i++) {
 			if (i > 1)
 				result = fibonacciService.getFibonacci(i);
 			System.out.println(result);
 		}
 		// test the 25th f*-nr
-		assertEquals(result, 46368);
+		assertEquals(result, 75025);
 	}
 
 	@AfterTest
