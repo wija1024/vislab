@@ -17,6 +17,13 @@ import de.hska.iwi.vislab.lab1.example.ws.FibonacciServiceImpl;
 
 public class FibonacciTest {
 
+	static {
+		// dump http on client
+		System.setProperty("com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump", "true");
+		// dump http on server		
+		//System.setProperty("com.sun.xml.internal.ws.transport.http.HttpAdapter.dump", "true");
+	}
+
 	// endpoint address
 	private static final String FIBONACCI_URL =
 			"http://localhost:4434/fibonacciservice";
