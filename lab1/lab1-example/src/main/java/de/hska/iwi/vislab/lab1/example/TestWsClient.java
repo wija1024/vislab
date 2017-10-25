@@ -26,7 +26,7 @@ public class TestWsClient {
 	
 	public static void main(final String[] args) throws Exception {
 		String url = (args.length > 0) ? args[0]
-				: "http://localhost:4435/buecherservice";
+				: "http://localhost:4434/buecherservice";
 		int anzahlBuecher = (args.length > 1) ? Integer.parseInt(args[1]) : 10;
 		test("TestWsClient", url, 1000000000L, anzahlBuecher, false);
 	}
