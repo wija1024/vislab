@@ -88,7 +88,7 @@ public class HotelService {
 
 	@PUT
 	@Path("{id}")
-	@Produces("text/url")
+	@Produces(MediaType.TEXT_PLAIN)
 	public Response confirmReservation(@PathParam("id") String id) {
 		logger.info("PUT request received on /hotel/" + id);
 		Response.Status stat = Response.Status.OK;
@@ -107,7 +107,7 @@ public class HotelService {
 
 	@DELETE
 	@Path("{id}")
-	@Produces("text/url")
+	@Produces(MediaType.TEXT_PLAIN)
 	public Response cancelReservation(@PathParam("id") String id) {
 		logger.info("DELETE request received on /hotel/" + id);
 		Response.Status stat = Response.Status.OK;
