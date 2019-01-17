@@ -15,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @SpringBootApplication
 @EnableOAuth2Client
 @Controller
@@ -37,12 +36,12 @@ public class HelloOauthWebApplication {
 	@Autowired
 	private OAuth2RestOperations restTemplate;
 
-  @RequestMapping("/")
-  public String home() {
-  	return "greet";
-  }
+	@RequestMapping("/")
+	public String home() {
+		return "greet";
+	}
 
-  @RequestMapping("/greet")
+	@RequestMapping("/greet")
 	public String next(Model model) {
 		String hello = restTemplate.getForObject(baseUrl + "/hello", String.class);
 		model.addAttribute("greet", hello);
@@ -60,7 +59,7 @@ public class HelloOauthWebApplication {
 		resource.setAccessTokenUri(tokenUrl);
 		resource.setUserAuthorizationUri(authorizeUrl);
 		resource.setClientId("my-trusted-client");
-		return resource ;
+		return resource;
 	}
 
 }
